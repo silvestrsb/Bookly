@@ -18,5 +18,30 @@ namespace BooklyWeb.Controllers
 
             return View(categories);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Category category)
+        {
+            if (category.Name == category.DisplayOrder.ToString())
+            {
+                ModelState.AddModelError("name", "Name input inside of DisplayOrder field");
+            }
+
+            if (ModelState.IsValid)
+            {
+                _dbContext.Categories.Add(category);
+                _dbContext.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            return View(category);
+        }
+
     }
 }
