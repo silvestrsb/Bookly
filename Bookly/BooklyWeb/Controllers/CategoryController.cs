@@ -37,6 +37,7 @@ namespace BooklyWeb.Controllers
             {
                 _dbContext.Categories.Add(category);
                 _dbContext.SaveChanges();
+                TempData["success"] = "Cateogry Created Successfuly";
 
                 return RedirectToAction("Index");
             }
@@ -74,6 +75,7 @@ namespace BooklyWeb.Controllers
             {
                 _dbContext.Categories.Update(category);
                 _dbContext.SaveChanges();
+                TempData["success"] = "Cateogry Updated Successfuly";
 
                 return RedirectToAction("Index");
             }
@@ -111,6 +113,7 @@ namespace BooklyWeb.Controllers
             {
                 _dbContext.Categories.Remove(category);
                 _dbContext.SaveChanges();
+                TempData["success"] = "Cateogry Removed Successfuly";
 
                 return RedirectToAction("Index");
             }
