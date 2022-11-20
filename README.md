@@ -3,3 +3,5 @@
 * Entity Framework Code First Approach 
 * CRUD Operations 
 * Server-side and Client-side Validation
+
+![Showcase](Bookly/showcase.png?raw=true "Showcase")
