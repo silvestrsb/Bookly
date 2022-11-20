@@ -2,3 +2,4 @@
 * Fundamentals of MVC architecture 
 * Entity Framework Code First Approach 
 * CRUD Operations 
+* Server-side and Client-side Validation
